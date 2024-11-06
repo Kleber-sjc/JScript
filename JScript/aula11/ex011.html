@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando Países</title>
+</head>
+<body>
+    <h1>Minha Nacionalidade!</h1>
+    Nome do páis: <input type="text" name="nome" id="nome"> 
+    <input type="button" value="Pesquisar" onclick="pais()"> 
+    <div id="resp"></div>
+
+    <script>
+        function pais() {
+            var nome1 = window.document.querySelector('input#nome') 
+            var resp = window.document.querySelector('div#resp')
+            var nom = (nome1.value)
+            resp.innerHTML = `<p>Vivendo em ${nom}.` 
+                if (nom == 'Brasil') {
+                  resp.innerHTML += `<p>Você é Brasileiro!</p>`
+                } else {
+                  resp.innerHTML += `<p>Você é estrangeiro, pois estamos pesquisando os nascidos no Brasil!</p>`
+                }
+        }
+    </script>
+</body>
+</html>
